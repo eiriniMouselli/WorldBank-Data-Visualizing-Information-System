@@ -1,0 +1,31 @@
+{
+  "name": "world-bank-database",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "cors": "^2.8.5",
+    "d3": "^5.16.0",
+    "express": "^4.17.1",
+    "mysql": "^2.18.1",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-dual-range-slider": "^1.0.4",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "^3.4.1"
+  },
+  "devDependencies": {
+    "express-pino-logger": "^5.0.0",
+    "node-env-run": "^3.0.2",
+    "nodemon": "^2.0.3",
+    "npm-run-all": "^4.1.5",
+    "pino-colada": "^1.6.1",
+    "webpack-dev-server": "^3.10.3"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "proxy": "http://localhost:5000"
+}

@@ -1,0 +1,11 @@
+I_ID,I_NAME
+SP.POP.TOTL,Population total
+SP.DYN.LE00.IN,"Life expectancy at birth, total (years)"
+NY.GDP.MKTP.KD.ZG,GDP growth (annual %)
+NY.GNP.PCAP.CD,"GNI per capita, Atlas method (current US$)"
+SP.DYN.CDRT.IN,"Death rate, crude (per 1,000 people)"
+SP.DYN.CBRT.IN,"Birth rate, crude (per 1,000 people)"
+SP.DYN.TFRT.IN,"Fertility rate, total (births per woman)"
+SP.POP.0014.TO,"Population ages 0-14, total"
+SP.POP.1564.TO,"Population ages 15-64, total"
+SP.POP.65UP.TO,"Population ages 65 and above, total"

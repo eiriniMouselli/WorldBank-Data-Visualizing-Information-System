@@ -1,0 +1,35 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.9.12",
+    "@material-ui/utils": "^4.9.12",
+    "chart.js": "^2.9.3",
+    "d3": "^5.16.0",
+    "popper.js": "^1.16.1",
+    "react-scripts": "^3.4.1"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^3.10.3"
+  },
+  "scripts": {
+    "start": " react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "proxy": "http://localhost:5000",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

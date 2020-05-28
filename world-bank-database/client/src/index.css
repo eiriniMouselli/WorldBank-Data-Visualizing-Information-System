@@ -1,0 +1,641 @@
+/* Eftihia Kiafa 3003,
+   Grigoria Nikita 3048,
+   Eirini Mouselli 3031
+*/
+
+/* animated title in opening-----------------------------------------------------*/
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:700");
+@keyframes showTopText {
+  0% {
+    transform: translate3d(0, 100%, 0);
+  }
+  40%, 60% {
+    transform: translate3d(0, 50%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  
+}
+@keyframes showBottomText {
+  0% {
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animated-title {
+  color: #301723FF;
+  font-family: Roboto, Arial, sans-serif;
+  height: 90vmin;
+  left: 53%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 120vmin;
+  
+  
+}
+
+.animated-title > div {
+  height: 50%;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+}
+
+.animated-title > div div {
+  font-size: 10vmin;
+  padding: 2vmin 0;
+  position: absolute;
+}
+
+.animated-title > div div span {
+  display: block;
+  
+}
+
+.animated-title > div.text-top {
+  border-bottom: 1vmin solid grey; 
+  width: 40%;
+  top: 0;
+  
+}
+
+.animated-title > div.text-top div {
+  animation: showTopText 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  bottom: 0;
+  transform: translate(0, 100%);
+}
+
+.animated-title > div.text-top div span:first-child {
+  color: #4F3466FF;
+}
+
+.animated-title > div.text-bottom {
+  bottom: 0;
+}
+
+.animated-title > div.text-bottom div {
+  animation: showBottomText 0.5s;
+  animation-delay: 1.75s;
+  animation-fill-mode: forwards;
+  top: 0;
+  transform: translate(0, -100%);
+}
+
+html {
+  box-sizing: border-box;
+}
+
+
+/*header and body of page-----------------------------------------------------------*/
+
+body {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 200;
+  color: #fff;
+  background-image: -webkit-gradient(linear,top,bottom, from(#372f6a), to(#A9A9A9));
+  background-image: linear-gradient(to left bottom, #A9A9A9 40%, #372f6a 70%);
+  overflow-y: auto;
+  margin-top: 900px;
+  height:300%;
+}
+
+h1, h2, p, ul, li {
+  font-family: sans-serif;
+}
+
+ul.header li {
+   float: center;
+  display: inline;
+  list-style-type: none;
+  margin: 160px;
+}
+
+ul.header {
+  background-color: #372f6a;
+  padding: 0px;
+}
+
+ul.header li a {
+  color: white;
+  font-weight: 200;
+  text-decoration: none;
+  padding: 20px;
+
+  display: inline-block;
+}
+
+.content {
+  opacity:70%;
+  background-color: #F2F3F4;
+  padding: 20px;
+}
+
+.content h2 {
+  padding: 0;
+  margin: 0;
+}
+
+.content li {
+  margin-bottom: 10px;
+}
+
+.active {
+  background-color: #A9A9A9;
+  
+}
+
+/*Images-----------------------------------------------------------------------------*/ 
+ 
+ img {
+  display: center;
+  padding-left: 390px;
+  padding-top: -10px;
+} 
+
+/*Labels of instructions------------------------------------------------------------*/
+
+label {
+
+  width: 50%;
+  position: relative;
+  margin: 100px 45px 100px 30px ;
+  color: rgb(149, 146, 150);
+  font-size: 1.1em;
+  top: -30px;
+}
+
+/*Menus,Menu Lists ,Menu Items----------------------------------------------------------*/
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+itemBg: #2c8fb5;
+CountriesAnimSpeed: 300ms;
+menu2AnimSpeed: 175ms;
+menu3AnimSpeed: 200ms;
+menu4AnimSpeed: 300ms;
+menu5AnimSpeed: 300ms;
+
+ul {
+  list-style-type: none;
+}
+
+.nav__menu .button {
+  background-color: #A9A9A9; 
+  border: none;
+  color: white;
+  padding: 21px 100px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.nav__menu .button:hover {
+  background-color: #372f6a;
+}
+
+.nav {
+  margin-top: 150px;
+  margin-bottom : 150px;
+  text-align: center;
+  width: 100%;
+}
+
+.nav__list {
+  display: inline-block;
+}
+
+.nav__menu {
+  float: left;
+  width: 250px;
+  height: 65px;
+  line-height: 65px;
+  text-transform: uppercase;
+  background-color: #A9A9A9;
+  cursor: pointer;
+}
+
+.nav__menu:hover {
+  background-color: #372f6a;
+}
+
+.nav__menu:hover > .nav__menu-lists li {
+  display: block;
+}
+
+.nav__menu:hover > .nav__menu--1-lists li:nth-child(1) {
+  opacity: 0;
+  -webkit-animation: Countries ease-in-out forwards;
+          animation: Countries ease-in-out forwards;
+  -webkit-animation-duration: 300ms;
+          animation-duration: 300ms;
+  -webkit-animation-delay: 0ms;
+          animation-delay: 0ms;
+}
+
+@-webkit-keyframes Countries {
+  from {
+    opacity: 0;
+    -webkit-transform: rotateX(-180deg);
+            transform: rotateX(-180deg);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+}
+
+@keyframes Countries {
+  from {
+    opacity: 0;
+    -webkit-transform: rotateX(-180deg);
+            transform: rotateX(-180deg);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+}
+
+.nav__menu:hover > .nav__menu--1-lists li:nth-child(2) {
+  opacity: 0;
+  -webkit-animation: Countries ease-in-out forwards;
+          animation: Countries ease-in-out forwards;
+  -webkit-animation-duration: 300ms;
+          animation-duration: 300ms;
+  -webkit-animation-delay: 150ms;
+          animation-delay: 150ms;
+}
+
+@keyframes Countries {
+  from {
+    opacity: 0;
+    -webkit-transform: rotateX(-180deg);
+            transform: rotateX(-180deg);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+}
+
+.nav__menu:hover > .nav__menu--1-lists li:nth-child(3) {
+  opacity: 0;
+  -webkit-animation: Countries ease-in-out forwards;
+          animation: Countries ease-in-out forwards;
+  -webkit-animation-duration: 300ms;
+          animation-duration: 300ms;
+  -webkit-animation-delay: 300ms;
+          animation-delay: 300ms;
+}
+
+@keyframes Countries {
+  from {
+    opacity: 0;
+    -webkit-transform: rotateX(-180deg);
+            transform: rotateX(-180deg);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+}
+
+.nav__menu:hover > .nav__menu--1-lists li:nth-child(4) {
+  opacity: 0;
+  -webkit-animation: Countries ease-in-out forwards;
+          animation: Countries ease-in-out forwards;
+  -webkit-animation-duration: 300ms;
+          animation-duration: 300ms;
+  -webkit-animation-delay: 450ms;
+          animation-delay: 450ms;
+}
+
+@keyframes Countries {
+  from {
+    opacity: 0;
+    -webkit-transform: rotateX(-180deg);
+            transform: rotateX(-180deg);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+}
+
+.nav__menu:hover > .nav__menu--1footer {
+    clear: both;
+    position: relative;
+    height: 200px;
+    margin-top: -200px;
+}-lists li:nth-child(5) {
+  opacity: 0;
+  -webkit-animation: Countries ease-in-out forwards;
+          animation: Countries ease-in-out forwards;
+  -webkit-animation-duration: 300ms;
+          animation-duration: 300ms;
+  -webkit-animation-delay: 600ms;
+          animation-delay: 600ms;
+}
+
+@keyframes Countries {
+  from {
+    opacity: 0;
+    -webkit-transform: rotateX(-180deg);
+            transform: rotateX(-180deg);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+}
+
+.nav__menu:hover > .nav__menu--1-lists li:nth-child(6) {
+  opacity: 0;
+  -webkit-animation: Countries ease-in-out forwards;
+          animation: Countries ease-in-out forwards;
+  -webkit-animation-duration: 300ms;
+          animation-duration: 300ms;
+  -webkit-animation-delay: 750ms;
+          animation-delay: 750ms;
+}
+
+@keyframes Countries {
+  from {
+    opacity: 0;
+    -webkit-transform: rotateX(-180deg);
+            transform: rotateX(-180deg);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+}
+
+.nav__menu:hover > .nav__menu--1-lists li:nth-child(7) {
+  opacity: 0;
+  -webkit-animation: Countries ease-in-out forwards;
+          animation: Countries ease-in-out forwards;
+  -webkit-animation-duration: 300ms;
+          animation-duration: 300ms;
+  -webkit-animation-delay: 850ms;
+          animation-delay: 850ms;
+}
+
+@keyframes Countries {
+  from {
+    opacity: 0;
+    -webkit-transform: rotateX(-180deg);
+            transform: rotateX(-180deg);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+}
+
+.nav__menu:hover > .nav__menu--1-lists li:nth-child(8) {
+  opacity: 0;
+  -webkit-animation: Countries ease-in-out forwards;
+          animation: Countries ease-in-out forwards;
+  -webkit-animation-duration: 300ms;
+          animation-duration: 300ms;
+  -webkit-animation-delay: 950ms;
+          animation-delay: 950ms;
+}
+
+@keyframes Countries {
+  from {
+    opacity: 0;
+    -webkit-transform: rotateX(-180deg);
+            transform: rotateX(-180deg);
+            transform:rotateY(-30deg);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+}
+
+.nav__menu:hover > .nav__menu--1-lists li:nth-child(9) {
+  opacity: 0;
+  -webkit-animation: Countries ease-in-out forwards;
+          animation: Countries ease-in-out forwards;
+  -webkit-animation-duration: 300ms;
+          animation-duration: 300ms;
+  -webkit-animation-delay: 1050ms;
+          animation-delay: 1050ms;
+}
+
+@keyframes Countries {
+  from {
+    opacity: 0;
+    -webkit-transform: rotateX(-180deg);
+            transform: rotateX(-180deg);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+}
+
+.nav__menu:hover > .nav__menu--1-lists li:nth-child(10) {
+  opacity: 0;
+  -webkit-animation: Countries ease-in-out forwards;
+          animation: Countries ease-in-out forwards;
+  -webkit-animation-duration: 300ms;
+          animation-duration: 300ms;
+  -webkit-animation-delay: 1150ms;
+          animation-delay: 1150ms;
+}
+
+@keyframes Countries {
+  from {
+    opacity: 0;
+    -webkit-transform: rotateX(-180deg);
+            transform: rotateX(-180deg);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+}
+
+.nav__menu:hover > .nav__menu--1-lists li:nth-child(10) {
+  opacity: 0;
+  -webkit-animation: Countries ease-in-out forwards;
+          animation: Countries ease-in-out forwards;
+  -webkit-animation-duration: 300ms;
+          animation-duration: 300ms;
+  -webkit-animation-delay: 1150ms;
+          animation-delay: 1150ms;
+}
+
+@keyframes submenu {
+  from {
+    opacity: 0;
+    -webkit-transform: rotateX(-180deg);
+            transform: rotateX(-180deg);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+}
+
+.nav__menu-lists {
+  -webkit-perspective: 5000px;
+          perspective: 5000px;
+}
+
+.nav__menu-items {
+  display: none;
+  width: 250px;
+  height: 50px;
+  background-color: #372f6a;
+}
+
+.nav__menu-items1 {
+  display: none;
+  width: 250px;
+  height: 150px;
+  background-color: #372f6a;
+}
+
+.nav__menu-items:hover {
+  background-color: #372f6a;
+}
+
+.nav__menu:nth-child(1) {
+  border-top-left-radius: 10px;
+}
+
+.nav__menu:last-child {
+  border-top-right-radius: 10px;
+}
+
+/*Scroll down chevrons-------------------------------------------------------------*/
+
+.container {
+  position: top;
+  width: 10px;
+  height: 10px;
+  
+  padding-left:350px;
+}
+
+.chevron {
+  position: absolute;
+  width: 28px;
+  height: 8px;
+  opacity: 0;
+  transform: scale3d(0.5, 0.5, 0.5);
+  animation: move 3s ease-out infinite;
+}
+
+.chevron:first-child {
+  animation: move 3s ease-out 1s infinite;
+}
+
+.chevron:nth-child(2) {
+  animation: move 3s ease-out 2s infinite;
+}
+
+.chevron:before,
+.chevron:after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 51%;
+  background: #fff;
+}
+
+.chevron:before {
+  left: 0;
+  transform: skew(0deg, 30deg);
+}
+
+.chevron:after {
+  right: 0;
+  width: 50%;
+  transform: skew(0deg, -30deg);
+}
+
+@keyframes move {
+  25% {
+    opacity: 1;
+
+  }
+  33% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+  67% {
+    opacity: 1;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+  }
+}
+
+.text {
+  display: block;
+  margin-top: 75px;
+  margin-left: -30px;
+  font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  font-size: 12px;
+  color: #fff;
+  text-transform: uppercase;
+  white-space: nowrap;
+  opacity: .25;
+  animation: pulse 2s linear alternate infinite;
+}
+
+@keyframes pulse {
+  to {
+    opacity: 1;
+  }
+
+}
+
+
+/*Footer---------------------------------------------------------*/
+
+footer{ height:95px; background-color:#F2F3F4; }
+
+footer{
+  padding :10px;
+  opacity: 70%;
+  margin-top:600px; 
+  font-size :16px;
+  color: grey;
+  position: bottom;
+}
