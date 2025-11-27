@@ -11,7 +11,7 @@
     "react-dom": "^16.13.0",
     "react-dual-range-slider": "^1.0.4",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "^3.4.1"
+    "react-scripts": "^5.0.1"
   },
   "devDependencies": {
     "express-pino-logger": "^5.0.0",
@@ -19,7 +19,7 @@
     "nodemon": "^2.0.3",
     "npm-run-all": "^4.1.5",
     "pino-colada": "^1.6.1",
-    "webpack-dev-server": "^3.10.3"
+    "webpack-dev-server": "^5.2.2"
   },
   "scripts": {
     "start": "node server.js",
